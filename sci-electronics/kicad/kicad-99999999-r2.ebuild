@@ -20,7 +20,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-EBZR_REPO_URI="lp:kicad"
+EBZR_REPO_URI="lp:kicad/stable"
 
 KEYWORDS=""
 if [[ "${PV}" != "99999999" ]]; then
