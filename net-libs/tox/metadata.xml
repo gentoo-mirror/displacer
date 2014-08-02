@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+    <email>emery@fuzzlabs.org</email>
+    <name>Emery Hemingway</name>
+  </maintainer>
+  <use>
+    <flag name='nacl'>Build against <pkg>net-libs/nacl</pkg></flag>
+    <flag name='server'>Build DHT bootstrap daemon</flag>
+    <flag name='sodium'>Build against <pkg>net-libs/libsodium</pkg></flag>
+  </use>
+</pkgmetadata>
