@@ -4,9 +4,9 @@
 
 EAPI="5"
 
-EGIT_REPO_URI="https://github.com/nurupo/ProjectTox-Qt-GUI"
+EGIT_REPO_URI="git://github.com/nurupo/ProjectTox-Qt-GUI.git"
 
-inherit qmake-utils git-r3
+inherit qmake-utils git-2
 
 DESCRIPTION="A front end for ProjectTox Core written in Qt5 and C++."
 HOMEPAGE="http://tox.im"
