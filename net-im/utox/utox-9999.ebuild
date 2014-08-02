@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="
 	media-libs/openal
-	net-libs/tox[av]
+	net-im/tox-core
 	media-libs/libv4l
 	x11-libs/libX11
 "
