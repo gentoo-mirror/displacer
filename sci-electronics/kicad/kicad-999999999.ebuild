@@ -52,7 +52,7 @@ src_unpack() {
 	fi
 
 	if ! use minimal; then
-		EBZR_REPO_URI="lp:~kicad-testing-committers/kicad/library" \
+		EBZR_REPO_URI="lp:~kicad-product-committers/kicad/library" \
 		EBZR_PROJECT="kicad-library" \
 		EBZR_UNPACK_DIR="${EBZR_UNPACK_DIR}/kicad-library" \
 		EBZR_CACHE_DIR="kicad-library" \
