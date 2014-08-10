@@ -37,6 +37,7 @@ DEPEND="${CDEPEND}
 	dev-doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}
 	sys-libs/zlib
+	python? ( dev-python/wxpython )
 	sci-electronics/electronics-menu
 	!minimal? ( !sci-electronics/kicad-library )"
 
