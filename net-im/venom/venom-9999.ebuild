@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="dev-libs/json-glib
 		dev-db/sqlite
-		net-libs/tox
+		net-im/tox-core
 		>=x11-libs/gtk+-3.4:3
 		$(vala_depend)"
 RDEPEND="${DEPEND}"
