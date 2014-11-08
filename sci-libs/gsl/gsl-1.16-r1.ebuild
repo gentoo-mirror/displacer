@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils flag-o-matic autotools toolchain-funcs
+inherit multilib multilib-minimal eutils flag-o-matic autotools toolchain-funcs
 
 DESCRIPTION="The GNU Scientific Library"
 HOMEPAGE="http://www.gnu.org/software/gsl/"
@@ -55,9 +55,10 @@ src_prepare() {
 		sed -i -e 's/\.so\([\.0-9]\+\)\?/\1.dylib/g' \
 			"${T}"/eselect.cblas.gsl || die
 	fi
+	multilib_copy_sources
 }
 
-src_configure() {
+multilib_src_configure() {
 	if use cblas-external; then
 		export CBLAS_LIBS="$($(tc-getPKG_CONFIG) --libs cblas)"
 		export CBLAS_CFLAGS="$($(tc-getPKG_CONFIG) --cflags cblas)"
@@ -68,7 +69,7 @@ src_configure() {
 		$(use_enable static-libs static)
 }
 
-src_install() {
+multilib_src_install() {
 	default
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
