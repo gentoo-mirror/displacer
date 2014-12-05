@@ -8,7 +8,7 @@ inherit qmake-utils
 
 if [[ "${PV}" = "9999" ]]; then
 	inherit git-2
-	EGIT_REPO_URI="git://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller.git"
+	EGIT_REPO_URI="git://github.com/Displacer/Asus-Zenbook-Ambient-Light-Sensor-Controller.git"
 	KEYWORDS=""
 else
 	COMMIT_ID="ba447bc47271dbf69ac4a4bad11cfadc04df69c3"
