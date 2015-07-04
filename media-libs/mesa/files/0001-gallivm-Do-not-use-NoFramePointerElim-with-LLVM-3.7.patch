@@ -1,0 +1,49 @@
+From b897aca66ad669fda0f6c4e7617ec51ca42823d8 Mon Sep 17 00:00:00 2001
+From: Vinson Lee <vlee@freedesktop.org>
+Date: Tue, 26 May 2015 22:18:28 -0700
+Subject: [PATCH 1/2] gallivm: Do not use NoFramePointerElim with LLVM 3.7.
+
+TargetOptions::NoFramePointerElim was removed in llvm-3.7.0svn r238244
+"Remove NoFramePointerElim and NoFramePointerElimOverride from
+TargetOptions and remove ExecutionEngine's dependence on CodeGen. NFC."
+
+Signed-off-by: Vinson Lee <vlee@freedesktop.org>
+Reviewed-by: Tom Stellard <thomas.stellard@amd.com>
+---
+ src/gallium/auxiliary/gallivm/lp_bld_debug.cpp | 2 ++
+ src/gallium/auxiliary/gallivm/lp_bld_misc.cpp  | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/src/gallium/auxiliary/gallivm/lp_bld_debug.cpp b/src/gallium/auxiliary/gallivm/lp_bld_debug.cpp
+index be3e834..76c302f 100644
+--- a/src/gallium/auxiliary/gallivm/lp_bld_debug.cpp
++++ b/src/gallium/auxiliary/gallivm/lp_bld_debug.cpp
+@@ -277,8 +277,10 @@ disassemble(const void* func, llvm::raw_ostream & Out)
+    options.StackAlignmentOverride = 4;
+ #endif
+ #if defined(DEBUG) || defined(PROFILE)
++#if HAVE_LLVM < 0x0307
+    options.NoFramePointerElim = true;
+ #endif
++#endif
+    OwningPtr<TargetMachine> TM(T->createTargetMachine(Triple, sys::getHostCPUName(), "", options));
+ 
+    /*
+diff --git a/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp b/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp
+index 5e8a634..ffed9e6 100644
+--- a/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp
++++ b/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp
+@@ -439,8 +439,10 @@ lp_build_create_jit_compiler_for_module(LLVMExecutionEngineRef *OutJIT,
+ #if HAVE_LLVM < 0x0304
+    options.NoFramePointerElimNonLeaf = true;
+ #endif
++#if HAVE_LLVM < 0x0307
+    options.NoFramePointerElim = true;
+ #endif
++#endif
+ 
+    builder.setEngineKind(EngineKind::JIT)
+           .setErrorStr(&Error)
+-- 
+2.4.0
+
