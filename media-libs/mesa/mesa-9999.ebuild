@@ -4,8 +4,8 @@
 
 EAPI=5
 
-EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
-#EGIT_REPO_URI="git://people.freedesktop.org/~agd5f/mesa"
+#EGIT_REPO_URI="git://anongit.freedesktop.org/mesa/mesa"
+EGIT_REPO_URI="git://people.freedesktop.org/~agd5f/mesa"
 EGIT_BRANCH="amdgpu"
 
 if [[ ${PV} = 9999* ]]; then
