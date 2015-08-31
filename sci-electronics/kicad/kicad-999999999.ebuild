@@ -5,7 +5,7 @@
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
 
-WX_GTK_VER="2.8"
+WX_GTK_VER="3.0"
 
 inherit cmake-utils wxwidgets fdo-mime gnome2-utils bzr python-r1 flag-o-matic
 
@@ -28,7 +28,7 @@ for lang in ${LANGS}; do
 	IUSE+=" linguas_${lang}"
 done
 
-CDEPEND="x11-libs/wxGTK:2.8[X,opengl,gnome]
+CDEPEND="x11-libs/wxGTK:3.0[X,opengl]
 		media-libs/glew"
 DEPEND="${CDEPEND}
 	>=dev-util/cmake-2.6.0
