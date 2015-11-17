@@ -10,4 +10,3 @@ net-misc/xupnpd 9999: Light DLNA Media Server
 sci-electronics/kicad 99999999-r2 99999999-r4601 99999999-r4609 999999999: Electronic Schematic and PCB design tools.
 sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
 sci-libs/gsl 1.16-r1: The GNU Scientific Library
-x11-drivers/xf86-video-amdgpu 9999: Accelerated Open Source driver for nVidia cards
