@@ -1,12 +1,12 @@
 app-benchmarks/glmark2 2011.08 2011.12 2012.12: Opengl test suite
-app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Controller
-app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
+app-laptop/zenbook-als 0_p20140502 9999: 
+app-laptop/zenbook-als-module 0_p20140423 9999: 
 dev-embeded/stlink 9999: On board debugger driver for stm32-discovery boards
-dev-libs/libsodium 9999: A portable fork of NaCl, a higher-level cryptographic library
-dev-libs/minIni 9999: library for reading and writing ini files
-media-gfx/freewrl 9999: VRML97 and X3D compliant browser, library, and web-browser plugin
+dev-libs/libsodium 9999: 
+dev-libs/minIni 9999: 
+media-gfx/freewrl 9999: 
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 net-misc/xupnpd 9999: Light DLNA Media Server
-sci-electronics/kicad 99999999-r2 99999999-r4601 99999999-r4609 999999999: Electronic Schematic and PCB design tools.
-sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
-sci-libs/gsl 1.16-r1: The GNU Scientific Library
+sci-electronics/kicad 99999999-r2 99999999-r4601 99999999-r4609 999999999: 
+sci-geosciences/osgearth 9999: 
+sci-libs/gsl 1.16-r1: 
