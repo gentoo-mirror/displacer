@@ -10,5 +10,5 @@ RDEPEND=media-libs/libpng media-libs/mesa[gles2?] x11-libs/libX11
 SLOT=0
 SRC_URI=http://launchpad.net/glmark2/trunk/2011.12/+download/glmark2-2011.12.tar.gz
 _eclass_exported_funcs=src_unpack:- src_prepare:- src_configure:- src_compile:waf-utils src_install:waf-utils
-_eclasses_=eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	waf-utils	c21174962af5ca8091b66f58612797ce
+_eclasses_=eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	waf-utils	c21174962af5ca8091b66f58612797ce
 _md5_=6e2d728024555c8deb4652e99593744d
