@@ -1,4 +1,4 @@
-app-benchmarks/glmark2 2011.08 2011.12 2012.12: Opengl test suite
+app-benchmarks/glmark2 2011.08 2011.12: Opengl test suite
 app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Controller
 app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
 dev-libs/libsodium 9999: A portable fork of NaCl, a higher-level cryptographic library
