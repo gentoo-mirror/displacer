@@ -1,9 +1,1 @@
-app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Controller
-app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
-dev-libs/minIni 9999: library for reading and writing ini files
-media-gfx/freewrl 9999: VRML97 and X3D compliant browser, library, and web-browser plugin
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
-media-video/simplescreenrecorder 0.3.6: A Simple Screen Recorder
-net-misc/xupnpd 9999: Light DLNA Media Server
-sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
-sci-libs/gsl 1.16-r1: The GNU Scientific Library
