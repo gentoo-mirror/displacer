@@ -18,6 +18,8 @@ RDEPEND="dev-libs/pugixml
 	dev-libs/libzip"
 DEPEND=""
 
-PATCHES="${FILESDIR}/install-enabled.patch"
+PATCHES=("${FILESDIR}/install-enabled.patch"
+	"${FILESDIR}/install-headers.patch"
+	)
 
 EGIT_REPO_URI="https://github.com/troldal/OpenXLSX.git"
