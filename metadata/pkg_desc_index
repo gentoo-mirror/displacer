@@ -1,4 +1,3 @@
-app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Controller
 app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
 dev-libs/minIni 9999: library for reading and writing ini files
 media-gfx/freewrl 9999: VRML97 and X3D compliant browser, library, and web-browser plugin
