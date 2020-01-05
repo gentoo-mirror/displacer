@@ -1,0 +1,12 @@
+DEFINED_PHASES=configure install
+DEPEND=dev-libs/libbsd
+DESCRIPTION=ASUS Zenbook Ambient Light Sensor Controller
+EAPI=7
+HOMEPAGE=http://github.com/victorenator/als
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=dev-libs/libbsd app-laptop/zenbook-als-module
+SLOT=0
+SRC_URI=https://github.com/danieleds/Asus-Zenbook-Ambient-Light-Sensor-Controller/archive/ba447bc47271dbf69ac4a4bad11cfadc04df69c3.tar.gz -> zenbook-als-0_p20140502-git.tar.gz
+_eclasses_=estack	686eaab303305a908fd57b2fd7617800	multilib	1d91b03d42ab6308b5f4f6b598ed110e	qmake-utils	4eb5e05ef7ee630c003e3f0edc094135	toolchain-funcs	512eb3367f507ebaa1d1d43ab7d66e6c
+_md5_=fea754a6c0170e87e882293e238ba6ca
