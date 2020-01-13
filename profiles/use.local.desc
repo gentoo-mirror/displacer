@@ -8,3 +8,5 @@ media-gfx/freewrl:libeai - Build EAI C library
 media-gfx/freewrl:osc - Allows for OSC-based control and communication between multiple freewrl instances
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
+sci-libs/tensorflow:cuda - Enable support for nVidia CUDA
+sci-libs/tensorflow:xla - XLA (Accelerated Linear Algebra) Optimizing Compiler for TensorFlow
