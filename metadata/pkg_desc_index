@@ -3,6 +3,7 @@ app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zen
 dev-libs/minIni 9999: library for reading and writing ini files
 dev-libs/openxlsx 9999: OpenXLSX is a C++ library for reading, writing, creating and modifying Microsoft Excel files, with the .xlsx format
 dev-python/scikit-build 0.10.0: Improved build system generator for Python C/C++/Fortran/Cython extensions
+dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-gfx/freewrl 9999: VRML97 and X3D compliant browser, library, and web-browser plugin
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 media-video/simplescreenrecorder 0.3.6: A Simple Screen Recorder

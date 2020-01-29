@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Meta package for ROCm
+EAPI=7
+IUSE=debug-tools hip opencl profiling science
+KEYWORDS=~amd64
+LICENSE=metapackage
+RDEPEND==dev-util/rocminfo-3.0* =dev-libs/rocm-smi-lib-3.0* =dev-util/rocm-smi-3.0* =sys-devel/hcc-3.0* opencl? ( >=dev-libs/rocm-opencl-runtime-3.0 ) opencl? ( =dev-util/rocm-clang-ocl-3.0* ) hip? ( =sys-devel/hip-3.0* ) hip? ( =sci-libs/hipBLAS-3.0* ) hip? ( =sci-libs/hipCUB-3.0* ) hip? ( =sci-libs/hipSPARSE-3.0* ) science? ( =sci-libs/rocALUTION-3.0* ) science? ( =sci-libs/rocBLAS-3.0* ) science? ( =sci-libs/rocRAND-3.0* ) science? ( =sci-libs/rocFFT-3.0* ) science? ( =sci-libs/rocPRIM-3.0* ) science? ( =sci-libs/rocRAND-3.0* ) science? ( =sci-libs/rocSPARSE-3.0* ) science? ( =sci-libs/rocThrust-3.0* ) science? ( =sci-libs/rocSOLVER-3.0* ) profiling? ( =dev-util/rocm-bandwidth-test-3.0* ) debug-tools? ( =dev-libs/rocr-debug-agent-3.0* ) debug-tools? ( =dev-util/rocprofiler-3.0* ) debug-tools? ( =dev-util/roctracer-3.0* )
+SLOT=0/3.0
+_md5_=9d6fe72a851b02ff657a2d973040e72d
