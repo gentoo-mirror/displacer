@@ -199,6 +199,10 @@ src_configure() {
 		export TF_SET_ANDROID_WORKSPACE=0
 
 		if use python; then
+			export ROCM_TOOLKIT_PATH=${EPREFIX%/}
+		fi
+
+		if use python; then
 			python_export PYTHON_SITEDIR
 			export PYTHON_BIN_PATH="${PYTHON}"
 			export PYTHON_LIB_PATH="${PYTHON_SITEDIR}"
