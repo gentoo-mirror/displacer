@@ -10,7 +10,7 @@ DESCRIPTION="Dynamic map generation toolkit for OpenSceneGraph"
 HOMEPAGE="http://osgearth.org/"
 
 if [[ "${PV}" = "9999" ]]; then
-	inherit git-2
+	inherit git-r3
 	EGIT_REPO_URI="git://github.com/Displacer/osgearth.git"
 else
         SRC_URI="https://github.com/gwaldron/osgearth/archive/${P}.tar.gz"
