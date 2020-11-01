@@ -9,6 +9,6 @@ media-video/simplescreenrecorder 0.3.6: A Simple Screen Recorder
 net-misc/xupnpd 9999: Light DLNA Media Server
 sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
 sci-libs/gsl 1.16-r1: The GNU Scientific Library
-sci-libs/scikits_image 0.15.0: Image processing routines for SciPy
+sci-libs/scikits_image 0.15.0 0.17.2: Image processing routines for SciPy
 sci-libs/tensorflow 2.1.0_rc2: Computation framework using data flow graphs for scalable machine learning
 sys-apps/opencorsairlink 9999: Status & control utility that interacts with CorsairLink products
