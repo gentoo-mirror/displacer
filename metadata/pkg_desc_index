@@ -2,7 +2,6 @@ app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Contr
 app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
 dev-libs/minIni 9999: library for reading and writing ini files
 dev-libs/openxlsx 9999: OpenXLSX is a C++ library for reading, writing, creating and modifying Microsoft Excel files, with the .xlsx format
-dev-python/scikit-build 0.10.0: Improved build system generator for Python C/C++/Fortran/Cython extensions
 dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 media-video/simplescreenrecorder 0.3.6: A Simple Screen Recorder
@@ -10,5 +9,4 @@ net-misc/xupnpd 9999: Light DLNA Media Server
 sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
 sci-libs/gsl 1.16-r1: The GNU Scientific Library
 sci-libs/scikits_image 0.15.0 0.17.2: Image processing routines for SciPy
-sci-libs/tensorflow 2.1.0_rc2: Computation framework using data flow graphs for scalable machine learning
 sys-apps/opencorsairlink 9999: Status & control utility that interacts with CorsairLink products
