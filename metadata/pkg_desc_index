@@ -4,8 +4,6 @@ dev-libs/minIni 9999: library for reading and writing ini files
 dev-libs/openxlsx 9999: OpenXLSX is a C++ library for reading, writing, creating and modifying Microsoft Excel files, with the .xlsx format
 dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
-media-video/simplescreenrecorder 0.3.6: A Simple Screen Recorder
 sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
-sci-libs/gsl 1.16-r1: The GNU Scientific Library
 sci-libs/scikits_image 0.15.0 0.17.2: Image processing routines for SciPy
 sys-apps/opencorsairlink 9999: Status & control utility that interacts with CorsairLink products
