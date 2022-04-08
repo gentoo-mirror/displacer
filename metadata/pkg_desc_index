@@ -5,5 +5,5 @@ dev-libs/openxlsx 9999: OpenXLSX is a C++ library for reading, writing, creating
 dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 sci-geosciences/osgearth 9999: Dynamic map generation toolkit for OpenSceneGraph
-sci-libs/scikits_image 0.15.0 0.17.2: Image processing routines for SciPy
+sci-libs/scikits_image 0.17.2: Image processing routines for SciPy
 sys-apps/opencorsairlink 9999: Status & control utility that interacts with CorsairLink products
