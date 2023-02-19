@@ -26,7 +26,7 @@ SRC_URI="
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="benchmark test"
+IUSE="benchmark test rocm"
 
 # libonnxruntime_framework.so: undefined reference to `onnx::AttributeProto_AttributeType_Name[abi:cxx11](onnx::AttributeProto_AttributeType)'
 RESTRICT="test"
@@ -53,6 +53,7 @@ DEPEND="
 
 PATCHES=(
 	"${FILESDIR}/${P}-system_libs.patch"
+	"${FILESDIR}/${P}-get-rocm-version-from-hipconfig.patch"
 )
 
 src_unpack() {
@@ -91,6 +92,7 @@ src_configure() {
 		-Donnxruntime_PREFER_SYSTEM_LIB=ON
 		-Donnxruntime_BUILD_BENCHMARKS=$(usex benchmark)
 		-Donnxruntime_BUILD_UNIT_TESTS=$(usex test)
+		-Donnxruntime_USE_ROCM=$(usex rocm)
 	)
 
 	cmake_src_configure
