@@ -1,0 +1,25 @@
+From 35ff9ccba664d3d1f369163f9778739c6c36aab1 Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Sat, 18 Feb 2023 21:13:37 +0300
+Subject: [PATCH] fix RepeatedIterator compile error
+
+---
+ onnxruntime/core/framework/tensorprotoutils.cc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/onnxruntime/core/framework/tensorprotoutils.cc b/onnxruntime/core/framework/tensorprotoutils.cc
+index ce23ae1de5..1472e430f5 100644
+--- a/onnxruntime-1.9.1/onnxruntime/core/framework/tensorprotoutils.cc
++++ b/onnxruntime-1.9.1/onnxruntime/core/framework/tensorprotoutils.cc
+@@ -256,7 +256,7 @@ Status UnpackTensor(const ONNX_NAMESPACE::TensorProto& tensor, const void* raw_d
+                              ") does not match the data size(", tensor.field_size(), ") in proto");         \
+     auto& data = tensor.field_name();                                                                       \
+     for (auto data_iter = data.cbegin(); data_iter != data.cend(); ++data_iter)                             \
+-      *p_data++ = *reinterpret_cast<const T*>(data_iter);                                                   \
++      *p_data++ = *(data_iter);                                                   \
+     return Status::OK();                                                                                    \
+   }
+ 
+-- 
+2.39.1
+
