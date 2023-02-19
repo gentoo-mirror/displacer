@@ -1,0 +1,37 @@
+From d299f50832f88f7d4e46b760f277782cee30f01f Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Sun, 19 Feb 2023 19:45:15 +0300
+Subject: [PATCH] get rocm version from hipconfig
+
+---
+ cmake/CMakeLists.txt | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/cmake/CMakeLists.txt b/cmake/CMakeLists.txt
+index 2534b99ff4..e79d43451e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1609,8 +1609,9 @@ if (onnxruntime_USE_ROCM)
+ 
+   # replicate strategy used by pytorch to get ROCM_VERSION
+   # https://github.com/pytorch/pytorch/blob/8eb21488fdcdb8b0e6fa2e46179b5fa6c42e75af/cmake/public/LoadHIP.cmake#L153-L173
+-  file(READ "${ROCM_PATH}/.info/version-dev" ROCM_VERSION_DEV_RAW)
+-  string(REGEX MATCH "^([0-9]+)\.([0-9]+)\.([0-9]+)-.*$" ROCM_VERSION_DEV_MATCH ${ROCM_VERSION_DEV_RAW})
++  # file(READ "${ROCM_PATH}/.info/version-dev" ROCM_VERSION_DEV_RAW)
++  execute_process(COMMAND  hipconfig -v OUTPUT_VARIABLE ROCM_VERSION_DEV_RAW)
++  string(REGEX MATCH "^([0-9]+)\.([0-9]+)\.([0-9]+)(-.*)?$" ROCM_VERSION_DEV_MATCH ${ROCM_VERSION_DEV_RAW})
+   if(ROCM_VERSION_DEV_MATCH)
+     set(ROCM_VERSION_DEV_MAJOR ${CMAKE_MATCH_1})
+     set(ROCM_VERSION_DEV_MINOR ${CMAKE_MATCH_2})
+@@ -1618,7 +1619,7 @@ if (onnxruntime_USE_ROCM)
+     set(ROCM_VERSION_DEV "${ROCM_VERSION_DEV_MAJOR}.${ROCM_VERSION_DEV_MINOR}.${ROCM_VERSION_DEV_PATCH}")
+     math(EXPR ROCM_VERSION_DEV_INT "(${ROCM_VERSION_DEV_MAJOR}*10000) + (${ROCM_VERSION_DEV_MINOR}*100) + ${ROCM_VERSION_DEV_PATCH}")
+   endif()
+-  message("\n***** ROCm version from ${ROCM_PATH}/.info/version-dev ****\n")
++  message("\n***** ROCm version from hipconfig -v ****\n")
+   message("ROCM_VERSION_DEV: ${ROCM_VERSION_DEV}")
+   message("ROCM_VERSION_DEV_MAJOR: ${ROCM_VERSION_DEV_MAJOR}")
+   message("ROCM_VERSION_DEV_MINOR: ${ROCM_VERSION_DEV_MINOR}")
+-- 
+2.39.1
+
