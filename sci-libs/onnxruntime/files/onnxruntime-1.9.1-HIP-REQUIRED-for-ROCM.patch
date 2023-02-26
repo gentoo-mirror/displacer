@@ -1,0 +1,25 @@
+From 124512ae9351bc0e704c6349902a6f446792a85e Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Sun, 26 Feb 2023 12:44:18 +0300
+Subject: [PATCH] HIP REQUIRED for ROCM
+
+---
+ cmake/onnxruntime_providers.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/onnxruntime_providers.cmake b/cmake/onnxruntime_providers.cmake
+index 5b5ff585ca..ee847b2ec8 100644
+--- a/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
++++ b/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
+@@ -1008,7 +1008,7 @@ if (onnxruntime_USE_ROCM)
+   list(APPEND CMAKE_PREFIX_PATH ${onnxruntime_ROCM_HOME} ${onnxruntime_ROCM_HOME}/hip ${onnxruntime_ROCM_HOME}/hcc ${onnxruntime_ROCM_HOME}/miopen ${onnxruntime_ROCM_HOME}/hiprand ${onnxruntime_ROCM_HOME}/rocrand)
+ 
+   set(CMAKE_MODULE_PATH "${onnxruntime_ROCM_HOME}/hip/cmake" ${CMAKE_MODULE_PATH})
+-  find_package(HIP)
++  find_package(HIP REQUIRED)
+   find_package(hiprand REQUIRED)
+   find_library(HIP_LIB amdhip64 REQUIRED)
+   find_library(ROC_BLAS rocblas REQUIRED)
+-- 
+2.39.1
+
