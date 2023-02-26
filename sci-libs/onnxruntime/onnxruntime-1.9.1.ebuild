@@ -61,6 +61,9 @@ src_unpack() {
 	      	 unpack ${A}
 	fi
 	eapply "${FILESDIR}/${P}-fix-RepeatedIterator-compile-error.patch"
+	eapply "${FILESDIR}/${P}-HIP-REQUIRED-for-ROCM.patch"
+	eapply "${FILESDIR}/${P}-hip_add_library-workaround.patch"
+	eapply "${FILESDIR}/${P}-directories-dirty-and-gfx1100-target.patch"
 }
 
 src_prepare() {

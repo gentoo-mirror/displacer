@@ -1,0 +1,40 @@
+From d62ce01a096db93cf4f22ca12681bdead9d0d64b Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Sun, 26 Feb 2023 16:19:31 +0300
+Subject: [PATCH] directories (dirty) and gfx1100 target
+
+---
+ cmake/onnxruntime_providers.cmake | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/cmake/onnxruntime_providers.cmake b/cmake/onnxruntime_providers.cmake
+index ea465ca817..6eb3f30fc8 100644
+--- a/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
++++ b/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
+@@ -1016,6 +1016,14 @@ if (onnxruntime_USE_ROCM)
+   find_library(RCCL_LIB rccl REQUIRED)
+   set(ONNXRUNTIME_ROCM_LIBS ${HIP_LIB} ${ROC_BLAS} ${MIOPEN_LIB} ${RCCL_LIB})
+ 
++  include_directories("/usr/include/rocblas/")
++  include_directories("/usr/include/miopen/")
++  include_directories("/usr/include/rccl/")
++  include_directories("/usr/include/rocsparse/")
++  include_directories("/usr/include/hipsparse/")
++  include_directories("/usr/include/hiprand/")
++  include_directories("/usr/include/hipfft/")
++  
+   file(GLOB_RECURSE onnxruntime_providers_rocm_cc_srcs CONFIGURE_DEPENDS
+     "${ONNXRUNTIME_ROOT}/core/providers/rocm/*.h"
+     "${ONNXRUNTIME_ROOT}/core/providers/rocm/*.cc"
+@@ -1099,7 +1107,7 @@ if (onnxruntime_USE_ROCM)
+   list(APPEND HIP_CLANG_FLAGS -fno-gpu-rdc)
+ 
+   # Generate GPU code for GFX9 Generation
+-  list(APPEND HIP_CLANG_FLAGS --amdgpu-target=gfx906 --amdgpu-target=gfx908)
++  list(APPEND HIP_CLANG_FLAGS --amdgpu-target=gfx1100)
+ 
+   include("/usr/lib64/cmake/hip/FindHIP.cmake")
+   hip_add_library(onnxruntime_providers_rocm ${onnxruntime_providers_rocm_src})
+-- 
+2.39.1
+

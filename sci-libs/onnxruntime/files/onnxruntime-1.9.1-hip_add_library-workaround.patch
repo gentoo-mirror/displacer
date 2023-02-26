@@ -1,0 +1,24 @@
+From 0ddc72085b33e7f099dc1e7aaf17964226b6e266 Mon Sep 17 00:00:00 2001
+From: Igor Ulyanov <disinbox@gmail.com>
+Date: Sun, 26 Feb 2023 15:43:48 +0300
+Subject: [PATCH] hip_add_library workaround
+
+---
+ cmake/onnxruntime_providers.cmake | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/cmake/onnxruntime_providers.cmake b/cmake/onnxruntime_providers.cmake
+index ee847b2ec8..ea465ca817 100644
+--- a/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
++++ b/onnxruntime-1.9.1/cmake/onnxruntime_providers.cmake
+@@ -1101,6 +1101,7 @@ if (onnxruntime_USE_ROCM)
+   # Generate GPU code for GFX9 Generation
+   list(APPEND HIP_CLANG_FLAGS --amdgpu-target=gfx906 --amdgpu-target=gfx908)
+ 
++  include("/usr/lib64/cmake/hip/FindHIP.cmake")
+   hip_add_library(onnxruntime_providers_rocm ${onnxruntime_providers_rocm_src})
+ 
+   target_link_libraries(onnxruntime_providers_rocm PRIVATE  ${ONNXRUNTIME_ROCM_LIBS})
+-- 
+2.39.1
+
