@@ -4,4 +4,3 @@ dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 sci-libs/onnxruntime 1.9.1: cross-platform, high performance ML inferencing and training accelerator
 sci-libs/scikits_image 0.17.2: Image processing routines for SciPy
-sys-apps/opencorsairlink 9999: Status & control utility that interacts with CorsairLink products
