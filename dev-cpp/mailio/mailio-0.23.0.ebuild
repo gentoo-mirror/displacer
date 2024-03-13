@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/karastojko/mailio"
 
 SRC_URI="https://github.com/karastojko/mailio/archive/refs/tags/${PV}.tar.gz"
 
-LICENSE="Simplified BSD License"
+LICENSE="BSD-2"
 SLOT="0"
 IUSE=""
 
