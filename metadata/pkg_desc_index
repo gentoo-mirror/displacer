@@ -1,6 +1,8 @@
 app-laptop/zenbook-als 0_p20140502 9999: ASUS Zenbook Ambient Light Sensor Controller
 app-laptop/zenbook-als-module 0_p20140423 9999: A kernel module for the ASUS Zenbook Ambient Light Sensor Driver
 dev-cpp/llama-cpp 9999: Port of Facebook's LLaMA model in C/C++
+dev-cpp/mailio 0.23.0: Cross platform C++ library for MIME format and SMTP, POP3 and IMAP protocols.
+dev-cpp/tgbot-cpp 1.6 1.7.2: C++ library for Telegram bot API
 dev-util/amd-rocm-meta 3.0.0: Meta package for ROCm
 media-libs/soil 20080707: SOIL is a tiny C library used primarily for uploading textures into OpenGL.
 sci-libs/onnxruntime 1.9.1: cross-platform, high performance ML inferencing and training accelerator
